@@ -46,4 +46,20 @@ class SharedPreferencesService {
     print("Getting todos");
     return sharedPreferences.getStringList('Items') ?? [];
   }
+
+
+ Future<void> removeTodo(int index) async {
+    final result = sharedPreferences.getStringList('Items') ;
+result?.removeAt(index);
+await sharedPreferences.setStringList('Items', result ?? [] ) ;
+    
+  }
+
+
+
+
+
+
+
+  
 }
