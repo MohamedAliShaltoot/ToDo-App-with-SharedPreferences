@@ -56,7 +56,13 @@ await sharedPreferences.setStringList('Items', result ?? [] ) ;
   }
 
 
-
+ Future<void>updateTodo(int index, String value) async {
+    final result = sharedPreferences.getStringList('Items') ;
+result?.removeAt(index);
+result?.insert(index, value);
+await sharedPreferences.setStringList('Items', result ?? [] ) ;
+    
+  }
 
 
 
