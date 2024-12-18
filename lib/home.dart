@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 border: InputBorder.none,
                 hintText: 'Search',
                 hintStyle: TextStyle(
-                  color: Color.fromARGB(255, 3, 172, 40),
+                  color: Color.fromARGB(255, 130, 133, 131),
                   fontSize: 16.0,
                 ),
                 focusedBorder: InputBorder.none,
