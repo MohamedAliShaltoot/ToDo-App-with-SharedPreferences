@@ -46,7 +46,10 @@ class _AddToDoScreenState extends State<AddToDoScreen> {
                     .addTodo(_todoController.text);
 // ignore: use_build_context_synchronously
                 Navigator.pop(context);
+              } else{
+                return;
               }
+              
             },
             child: Text(
               'Add',

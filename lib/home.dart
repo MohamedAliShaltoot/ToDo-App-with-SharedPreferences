@@ -136,7 +136,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       Padding(
                         padding: const EdgeInsets.all(15.0),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            setState(() {
+                              
+                            });
+                            service?.removeTodo(index);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text("Note Deleted"))
+                            );
+                          },
                           child: const Icon(
                             Icons.delete,
                             color: Colors.red,
