@@ -230,6 +230,7 @@
 //   }
 // }
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../services/shared_preferences.dart';
 
@@ -375,7 +376,37 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: const Text('My Notes'),
+        title: Animate(
+  effects: const [
+    FadeEffect(duration: Duration(seconds: 4)),
+    ScaleEffect(duration: Duration(seconds: 2), ),
+    RotateEffect(duration: Duration(seconds: 3),), // تأثير الدوران
+  ],
+  child: const Text(
+    "My Notes",
+    style: TextStyle(
+      fontSize: 24, // حجم الخط
+      fontWeight: FontWeight.bold, // سمك الخط
+      color: Color.fromARGB(255, 14, 14, 15), // لون النص
+    ),
+  ),
+),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         centerTitle: true,
       ),
       body: filteredTodos.isEmpty
